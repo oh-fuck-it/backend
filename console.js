@@ -1,7 +1,7 @@
 const express = require('express');
 const ParseDashboard = require('parse-dashboard');
 
-const serverUrl = process.env.SERVER_URL || "http://localhost:1337/api";
+const serverUrl = process.env.SERVER_URL || "http://62.234.132.110:1337/api";
 
 const dashboard = new ParseDashboard({
     "apps": [
