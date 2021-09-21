@@ -6,8 +6,9 @@ const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 const serverUrl = process.env.SERVER_URL || "http://localhost:1337/api";
 const user = "umb"
 const pwd = "nzBh0x)f)kk7P~cQe_IM"
+const databaseUrl= `mongodb://${user}:${pwd}@62.234.132.110:27017/dev?authSource=admin`
 const api = new ParseServer({
-    databaseURI: databaseUri || `mongodb://${user}:${pwd}@62.234.132.110:27017/dev`, // Connection string for your MongoDB database
+    databaseURI: databaseUrl, // Connection string for your MongoDB database
     cloud: __dirname + '/cloud/main.js', // Path to your Cloud Code
     appId: 'photoAPP',
     masterKey: 'fdsghuykry3287g', // Keep this key secret!
